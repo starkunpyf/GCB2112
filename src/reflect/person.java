@@ -1,8 +1,12 @@
 package reflect;
 
+import reflect.annotations.AutoRunClass;
+import reflect.annotations.AutoRunMethod;
+
 /**
  * 使用当前类测试反射机制
  */
+@AutoRunClass
 public class Person {
     private String name = "张三";
     private int age = 22;
@@ -13,10 +17,11 @@ public class Person {
         this.name = name;
         this.age = age;
     }
-
+    @AutoRunMethod(1)
     public void sayHello(){
         System.out.println(name+":"+"hello!");
     }
+
     public void sayHi(){
         System.out.println(name+":"+"hi!");
     }

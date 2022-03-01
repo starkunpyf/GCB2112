@@ -3,23 +3,22 @@ package test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
 class Test {
-    static void print(List al) {
-        al.add(2);
-        al = new ArrayList();
-        al.add(3);
-        al.add(4);
-
-    }
-
     public static void main(String[] args) {
-        List al = new ArrayList();
-        al.add(1);
-        print(al);
-        System.out.println(al.get(1));
+        Map<String,Integer> map = new HashMap<>();
+        map.put("语文",99);
+        map.put("数学",98);
+        map.put("英语",97);
+        map.put("物理",96);
+        map.put("化学",99);
+
+        map.forEach(
+                (k,v)-> System.out.println(k+":"+v)
+        );
     }
 
 }
